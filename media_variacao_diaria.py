@@ -1,11 +1,3 @@
-"""
-Esse codigo plota um grafico mostrando a média de variação diaria
-de um ativo (VARIAÇÃO DO VALOR OU PONTOS). ele pega as informações do MT5
-
-By: George Telles
-+55 11 93290-7425
-"""
-
 import matplotlib.pyplot as plt
 import MetaTrader5 as mt5
 import pandas as pd
@@ -33,7 +25,7 @@ dados_analisados = pd.Series(data["variacao"])
 figure(figsize = (10, 6), dpi = 80)
 dados_analisados.plot.hist(grid=True, bins=100, rwidth=0.9, color = "#607c8e")
 
-plt.title("Variação de pontos desde a abertura, o ponto 0.0 representa abertura do pregão")
+plt.title("Variação de pontos desde a abertura")
 plt.xlabel("Quantidade de pregões")
 plt.ylabel("Variação de pontos desde a abertura")
 plt.show()
